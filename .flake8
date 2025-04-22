@@ -1,0 +1,13 @@
+# .flake8
+
+[flake8]
+max-line-length = 79
+
+exclude = .git,__pycache__,.venv,env,.idea,.pylintrc,README.md,requirements.txt,editor
+
+# E (errors), W (warnings), F (failures), C (complexity), B (bugbear)
+select = E,F,W,C,B
+
+max-complexity = 10
+
+statistics = True

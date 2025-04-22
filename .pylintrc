@@ -1,0 +1,26 @@
+# .pylintrc
+
+[MASTER]
+ignore=.venv,.git,__pycache__,.idea,.flake8,README.md,requirements.txt,editor
+
+[MESSAGES CONTROL]
+disable = C0114
+
+[FORMAT]
+indent-string='    '
+indent-after-paren=4
+max-line-length=79
+
+[BASIC]
+variable-rgx=[a-z_][a-z0-9_]{2,30}$
+argument-rgx=[a-z_][a-z0-9_]{2,30}$
+function-rgx=[a-z_][a-z0-9_]{2,30}$
+
+docstring-min-length=10
+
+[DESIGN]
+max-args=5
+max-locals=15
+max-returns=6
+max-branches=12
+max-statements=50
