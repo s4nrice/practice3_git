@@ -17,14 +17,15 @@ def normalize_to_minus_one_one(numbers: list[float]) -> list[float]:
     return result
 
 
-def binary_class_accuracy(predictions: list[float], targets: list[int]) -> float:
+def binary_class_accuracy(predictions: list[float], targets: list[int]) \
+        -> float:
 
     if len(predictions) != len(targets):
         return -1
 
     correct = 0
-    for i in range(len(predictions)):
-        if abs(predictions[i] - targets[i]) < 0.5:
+    for i, pred in enumerate(predictions):
+        if abs(pred - targets[i]) < 0.5:
             correct += 1
 
     return correct / len(predictions)
@@ -33,7 +34,7 @@ def binary_class_accuracy(predictions: list[float], targets: list[int]) -> float
 def main():
 
     print(normalize_to_minus_one_one([5, 7, -2]))
-    print(binary_class_accuracy([0.6, 0.8, 0.3], [1, 0, 0])
+    print(binary_class_accuracy([0.6, 0.8, 0.3], [1, 0, 0]))
 
 
 if __name__ == '__main__':
