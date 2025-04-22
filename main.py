@@ -19,6 +19,9 @@ def normalize_to_minus_one_one(numbers: list[float]) -> list[float]:
 
 def binary_class_accuracy(predictions: list[float], targets: list[int]) -> float:
 
+    if len(predictions) != len(targets):
+        return -1
+
     correct = 0
     for i in range(len(predictions)):
         if abs(predictions[i] - targets[i]) < 0.5:
