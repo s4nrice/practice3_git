@@ -4,7 +4,7 @@
 ignore=.venv,.git,__pycache__,.idea,.flake8,README.md,requirements.txt,editor
 
 [MESSAGES CONTROL]
-disable = C0114
+disable = C0114,C0116
 
 [FORMAT]
 indent-string='    '
